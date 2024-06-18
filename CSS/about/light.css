@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    background-image: url('/IMAGES/lightMountains.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #092E59;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+header .logo {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.logo-img {
+    max-height: 50px; /* Logonun yüksekliğini ayarlayın */
+    transition: transform 0.5s ease, filter 0.5s ease; /* Dönüşüm ve filtre değişikliklerini animasyonlu yapar */
+}
+
+.logo-img:hover {
+    transform: scale(1.1) rotate(10deg); /* Hover üzerinde %10 büyütür ve 10 derece döndürür */
+    filter: brightness(1.2); /* Hover üzerinde parlaklığı artırır */
+}
+
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+    white-space: nowrap; /* Metnin sarılmasını engelle */
+    font-family: 'Poppins', sans-serif; /* Modern ve estetik bir yazı tipi */
+    position: relative; /* Pseudo-element için konumlandırma */
+    display: inline-block;
+    padding-bottom: 5px; /* Aşağıdaki çizgi için yer bırakır */
+    transition: color 0.3s ease; /* Metin rengini yumuşak bir şekilde değiştirir */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #092E59; /* Çizginin rengi */
+    transition: width 0.3s ease; /* Çizginin genişlemesini animasyonlu yapar */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Çizginin genişlemesi hover üzerine geldiğinde tam genişlikte olur */
+}
+
+nav ul li a:hover {
+    color: #092E59; /* Hover üzerinde metin rengini değiştirir */
+}
+
+/* Add active state styling */
+nav ul li a.active {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Hamburger menü için temel stil */
+.hamburger {
+    display: none; /* Varsayılan olarak gizli */
+    cursor: pointer;
+    font-size: 28px;
+    color: #000; /* Siyah renk */
+    transition: transform 0.3s ease, color 0.3s ease; /* Dönüşüm ve renk değişiklikleri animasyonu */
+}
+
+/* Hover efekti */
+.hamburger:hover {
+    transform: scale(1.2); /* Hover üzerinde %20 büyütür */
+}
+
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.controls > div {
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Büyüme ve gölge değişikliği animasyonu */
+    border-radius: 26px; /* Oval şekil için köşeleri yuvarlak yapar */
+}
+
+.switch:hover {
+    transform: scale(1.1); /* Hover üzerinde büyüme efekti */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: background-color 0.4s, box-shadow 0.4s; /* Arka plan rengi ve gölge değişikliği animasyonu */
+    border-radius: 26px; /* Oval şekil için köşeleri yuvarlak yapar */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: transform 0.4s; /* Düğmenin hareketi için animasyon */
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(34px);
+}
+
+/* Yeni Slider İçi Metin */
+.slider .slider-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slider içindeki ikonlar */
+.slider .slider-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slider-text.en {
+    right: 2px;
+}
+
+.slider .slider-text.tr {
+    left: 2px;
+}
+
+.slider .slider-icon.light {
+    right: 5px;
+}
+
+.slider .slider-icon.dark {
+    left: 5px;
+}
+
+/* Slider hover animasyonu */
+.slider:hover {
+    background-color: #b0bec5; /* Hover üzerinde arka plan rengi değişikliği */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
+}
+
+/*Main Content Area*/
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+#main_content{
+    background-color: #ffffff40;
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 1 / -1; /* Span all rows */
+}
+
+#main_content section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Ensure sections are distinguishable */
+    margin: 10px 0; /* Separate sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+}
+
+/* Flex container for main section */
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+article > img{
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+}
+
+h1{
+    font-weight: bold;
+    font-size: xx-large;
+    align-self: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info h1 {
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+}
+
+.profile-info h2 {
+    font-weight: normal;
+    font-size: 1.5em;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+
+
+
+/*Main Content Area*/
+
+/*Footer Area*/
+footer {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Footer logosu için temel stil */
+.footerLogo {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animasyonlu dönüşüm ve parlaklık değişikliği */
+    cursor: pointer; /* Fare imlecini el işaretine dönüştürür */
+}
+
+/* Footer logosu hover animasyonu */
+.footerLogo:hover {
+    transform: translateY(-5px) scale(1.2); /* Yukarı hareket eder ve büyür */
+    filter: brightness(1.2); /* Parlaklığı artırır */
+}
+
+/* Yukarı kaydırma logosu için stil */
+.footerLogoUp {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animasyonlu dönüşüm ve parlaklık değişikliği */
+    cursor: pointer; /* Fare imlecini el işaretine dönüştürür */
+}
+
+/* Yukarı kaydırma logosu hover animasyonu */
+.footerLogoUp:hover {
+    transform: translateY(-5px) scale(1.2); /* Yukarı hareket eder ve büyür */
+    filter: brightness(1.2); /* Parlaklığı artırır */
+}
+
+
+.footerLogoUp {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animasyonlu dönüşüm ve renk değişikliği */
+    cursor: pointer; /* Kullanıcının logonun tıklanabilir olduğunu anlaması için el işareti */
+}
+
+.footerLogoUp:hover {
+    transform: translateY(-5px) scale(1.2); /* Yukarıya hareket eder ve büyür */
+    filter: brightness(1.2); /* Biraz daha parlak görünmesini sağlar */
+}
+
+
+footer .social-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #555; /* Orta Gri */
+    font-weight: 700;
+    
+}
+
+footer .credits {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+}
+
+footer .scroll-up {
+    border: 2px solid #555; /* Orta Gri */
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #555;
+    font-weight: 700;
+}
+/*Footer Area*/
+
+/* Medya Sorguları */
+@media (max-width: 1000px) {
+
+    body {
+        background-image: url('/IMAGES/mobileMountains.jpg'); /* Mobil cihazlar için farklı bir resim */
+        background-size: contain; /* Resmin alanı doldurması için uygun */
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #ffffff;
+        color: #000;
+        border: 1px solid #555;
+        width: 200px;
+        padding: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bolder;
+        white-space: nowrap; /* Metnin sarılmasını engelle */
+        font-family: 'Poppins', sans-serif; /* Modern ve estetik bir yazı tipi */
+        position: relative; /* Pseudo-element için konumlandırma */
+        display: inline-block;
+        padding-bottom: 5px; /* Aşağıdaki çizgi için yer bırakır */
+        transition: color 0.3s ease; /* Metin rengini yumuşak bir şekilde değiştirir */
+    }
+
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #059375; /* Çizginin rengi */
+        transition: width 0.3s ease; /* Çizginin genişlemesini animasyonlu yapar */
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%; /* Çizginin genişlemesi hover üzerine geldiğinde tam genişlikte olur */
+    }
+    
+    nav ul li a:hover {
+        color: #059375; /* Hover üzerinde metin rengini değiştirir */
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .main {
+        grid-template-rows: repeat(5, auto); /* Allow rows to resize based on content */
+        padding: 10px;
+    }
+
+    #main_content section {
+        margin: 5px 0; /* Reduce margin for sections */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .card {
+        grid-template-columns: 1fr; /* Stack elements vertically */
+        grid-template-rows: auto; /* Adjust rows to content */
+        text-align: center; /* Center text */
+    }
+
+    .card > img {
+        width: 100%; /* Image takes full width in stacked layout */
+        grid-column: 1; /* Span the whole column */
+        grid-row: 1; /* Position at the top */
+        border-radius: 8px 8px 0 0; /* Round only the top corners */
+    }
+
+    .card > h3, .card > p {
+        grid-column: 1; /* Span the whole column */
+        padding: 10px 0; /* Add padding */
+    }
+
+}
+
+/* Hamburger menü çizgileri için stiller */
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #ffffff; /* Çizgiler de siyah renk */
+    transition: all 0.3s ease; /* Bütün dönüşüm ve renk değişiklikleri animasyonu */
+}
+
+/* Açıldığında (toggle edilmiş durumda) animasyon */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
