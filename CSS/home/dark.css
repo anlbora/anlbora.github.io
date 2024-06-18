@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+html, body {
+    height: 100%; /* Ensure the full height is utilized */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    /* Background image for dark mode */
+    background-image: url('/IMAGES/darkMountain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Modern and aesthetic font */
+    font-size: 18px;
+    color: #e0e0e0; /* Light text color */
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #e0e0e0; /* Light text color for header */
+    background-color: #1e1e1e; /* Darker background for header */
+    flex-shrink: 0;
+}
+
+header .logo {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.logo-img {
+    max-height: 50px; /* Set logo height */
+    transition: transform 0.5s ease, filter 0.5s ease; /* Smooth transform and filter changes */
+}
+
+.logo-img:hover {
+    transform: scale(1.1) rotate(10deg); /* Scale and rotate on hover */
+    filter: brightness(1.2); /* Increase brightness on hover */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0; /* Light text color for nav items */
+    font-weight: bolder;
+    white-space: nowrap; /* Prevent text wrapping */
+    font-family: 'Poppins', sans-serif; /* Modern and aesthetic font */
+    position: relative; /* Position for pseudo-element */
+    display: inline-block;
+    padding-bottom: 5px; /* Space below text for underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #90caf9; /* Accent color for underline */
+    transition: width 0.3s ease; /* Smooth width transition */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+}
+
+nav ul li a:hover {
+    color: #90caf9; /* Accent color on hover */
+}
+
+/* Add active state styling */
+nav ul li a.active {
+    background-color: #333; /* Slightly lighter background for active link */
+    border-radius: 4px;
+}
+
+/* Hamburger menu basic styling */
+.hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 28px;
+    color: #e0e0e0; /* Light color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transform and color changes */
+}
+
+/* Hover effect */
+.hamburger:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.controls > div {
+    margin-left: 20px;
+    color: #e0e0e0; /* Light color for controls */
+    font-weight: 200;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow changes */
+    border-radius: 26px; /* Rounded shape */
+}
+
+.switch:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #444; /* Dark slider background */
+    transition: background-color 0.4s, box-shadow 0.4s; /* Smooth background and shadow changes */
+    border-radius: 26px; /* Rounded shape */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #e0e0e0; /* Light slider knob */
+    transition: transform 0.4s; /* Smooth knob movement */
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #90caf9; /* Active background color */
+}
+
+input:checked + .slider:before {
+    transform: translateX(34px);
+}
+
+/* Slider inside text */
+.slider .slider-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icons inside the slider */
+.slider .slider-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slider-text.en {
+    right: 2px;
+}
+
+.slider .slider-text.tr {
+    left: 2px;
+}
+
+.slider .slider-icon.light {
+    right: 5px;
+}
+
+.slider .slider-icon.dark {
+    left: 5px;
+}
+
+/* Slider hover animation */
+.slider:hover {
+    background-color: #666; /* Slightly lighter background on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Main Content Area */
+.main {
+    display: grid;
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: repeat(5, auto); /* Five equal rows */
+    width: 100%; /* Cover entire page width */
+    height: 100%; /* Cover entire page height */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width and height */
+    overflow: auto; /* Enable scrolling if content overflows */
+}
+
+#main_content {
+    background-color: #333333a0; /* Semi-transparent dark background */
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 1 / -1; /* Span all rows */
+}
+
+#main_content section {
+    padding: 20px;
+    background-color: #1e1e1ea0; /* Semi-transparent dark background */
+    margin: 10px 0; /* Separate sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+}
+
+#welcoming_text {
+    color: #e0e0e0; /* Light text color */
+    display: grid;
+    font-size: xx-large;
+}
+
+/* Flex container for main section */
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.section-headings {
+    position: relative; /* For positioning read more link */
+    padding: 20px;
+    background-color: #1e1e1eb0; /* Semi-transparent dark background */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Card layout */
+.card {
+    position: relative; /* For positioning read more link */
+    padding: 20px;
+    background-color: #292929a0; /* Semi-transparent dark background */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Image styling */
+.card img {
+    float: left; /* Float image to the left */
+    width: 50%;
+    height: auto;
+    margin-right: 15px; /* Space between image and text */
+    border-radius: 8px;
+}
+
+/* Text styling */
+.card p {
+    margin: 0;
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Text styling */
+.card h3 {
+    margin: 0;
+    color: #90caf9; /* Light text color */
+}
+
+/* Hidden text for read more */
+.more-text {
+    display: none; /* Initially hidden */
+}
+
+/* Read more link styling */
+.read-more {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #90caf9; /* Accent color */
+    font-weight: bold;
+    cursor: pointer;
+    text-align: right; /* Align to the right */
+}
+
+/* Ensure the card link doesn't add default link styles */
+.card-link, h2 a {
+    text-decoration: none;
+    color: #90caf9; /* Accent color */
+    display: block;
+}
+
+/* Add hover effect to the entire card */
+.card-link:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect to the entire card */
+h2:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Footer Area */
+footer {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0; /* Light text color */
+    background-color: #1e1e1e; /* Dark background */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Basic styling for footer logos */
+.footerLogo {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transform and brightness changes */
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+/* Hover animation for footer logos */
+.footerLogo:hover {
+    transform: translateY(-5px) scale(1.2); /* Move up and scale */
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+/* Styling for the 'scroll up' logo */
+.footerLogoUp {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transform and brightness changes */
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+/* Hover animation for the 'scroll up' logo */
+.footerLogoUp:hover {
+    transform: translateY(-5px) scale(1.2); /* Move up and scale */
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+footer .social-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #07c991; /* Accent color */
+    font-weight: 700;
+}
+
+footer .credits {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0; /* Light text color */
+}
+
+footer .scroll-up {
+    border: 2px solid #90caf9; /* Accent color */
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #90caf9; /* Accent color */
+    font-weight: 700;
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    body {
+        background-image: url('/IMAGES/mobileDarkMountains.jpg'); /* Different image for mobile */
+        background-size: contain; /* Fit the image to the screen */
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #1e1e1e; /* Dark background for mobile menu */
+        color: #e0e0e0; /* Light text color */
+        border: 1px solid #90caf9; /* Accent color for border */
+        width: 200px;
+        padding: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #e0e0e0; /* Light text color */
+        font-weight: bolder;
+        white-space: nowrap; /* Prevent text wrapping */
+        font-family: 'Poppins', sans-serif; /* Modern and aesthetic font */
+        position: relative; /* Position for pseudo-element */
+        display: inline-block;
+        padding-bottom: 5px; /* Space below text for underline */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #90caf9; /* Accent color for underline */
+        transition: width 0.3s ease; /* Smooth width transition */
+    }
+
+    nav ul li a:hover::after {
+        width: 100%; /* Full-width underline on hover */
+    }
+
+    nav ul li a:hover {
+        color: #90caf9; /* Accent color on hover */
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .main {
+        grid-template-rows: repeat(5, auto); /* Allow rows to resize based on content */
+        padding: 10px;
+    }
+
+    #main_content section {
+        margin: 5px 0; /* Reduce margin for sections */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .card {
+        grid-template-columns: 1fr; /* Stack elements vertically */
+        grid-template-rows: auto; /* Adjust rows to content */
+        text-align: center; /* Center text */
+    }
+
+    .card > img {
+        width: 100%; /* Image takes full width in stacked layout */
+        grid-column: 1; /* Span the whole column */
+        grid-row: 1; /* Position at the top */
+        border-radius: 8px 8px 0 0; /* Round only the top corners */
+    }
+
+    .card > h3, .card > p {
+        grid-column: 1; /* Span the whole column */
+        padding: 10px 0; /* Add padding */
+    }
+}
+
+/* Hamburger menu lines styling */
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #e0e0e0; /* Light color for lines */
+    transition: all 0.3s ease; /* Smooth all transitions */
+}
+
+/* Animation when opened (toggled) */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
