@@ -8,7 +8,7 @@ html, body {
 }
 
 html {
-    background-image: url('/IMAGES/darkMountain.jpg'); /* Dark mode background image */
+    background-image: url('/IMAGES/lightMountains.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    color: #e0e0e0; /* Light text color for dark mode */
+    color: #092E59;
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -29,8 +29,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    color: #e0e0e0; /* Light text color */
-    background-color: #1e1e1e; /* Dark background for header */
+    color: #fff;
     flex-shrink: 0;
 }
 
@@ -62,7 +61,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #e0e0e0; /* Light text color for navigation links */
+    color: #ffffff;
     font-weight: bolder;
     white-space: nowrap;
     font-family: 'Poppins', sans-serif;
@@ -79,7 +78,7 @@ nav ul li a::after {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #90caf9; /* Accent color for underline */
+    background-color: #092E59;
     transition: width 0.3s ease;
 }
 
@@ -88,11 +87,11 @@ nav ul li a:hover::after {
 }
 
 nav ul li a:hover {
-    color: #90caf9; /* Accent color on hover */
+    color: #092E59;
 }
 
 nav ul li a.active {
-    background-color: #333; /* Slightly lighter background for active link */
+    background-color: #575757;
     border-radius: 4px;
 }
 
@@ -100,7 +99,7 @@ nav ul li a.active {
     display: none;
     cursor: pointer;
     font-size: 28px;
-    color: #e0e0e0;
+    color: #000;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -115,7 +114,7 @@ nav ul li a.active {
 
 .controls > div {
     margin-left: 20px;
-    color: #e0e0e0; /* Light color for controls */
+    color: #fff;
     font-weight: 200;
 }
 
@@ -147,7 +146,7 @@ nav ul li a.active {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #444; /* Darker slider background */
+    background-color: #ccc;
     transition: background-color 0.4s, box-shadow 0.4s;
     border-radius: 26px;
 }
@@ -159,13 +158,13 @@ nav ul li a.active {
     width: 20px;
     left: 3px;
     bottom: 3px;
-    background-color: #e0e0e0; /* Light slider knob */
+    background-color: white;
     transition: transform 0.4s;
     border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #90caf9; /* Active background color */
+    background-color: #2196F3;
 }
 
 input:checked + .slider:before {
@@ -215,11 +214,11 @@ input:checked + .slider:before {
 }
 
 .slider:hover {
-    background-color: #666;
+    background-color: #b0bec5;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Content Area */
+/*Main Content Area*/
 .main {
     display: grid;
     grid-template-columns: 1fr;
@@ -232,41 +231,37 @@ input:checked + .slider:before {
 }
 
 #main_content {
-    background-color: #333333a0; /* Semi-transparent dark background */
+    background-color: #ffffff40;
     padding: 20px;
     grid-column: 1;
     grid-row: 1 / -1;
 }
 
-#main_content section {
+.main-section {
     padding: 20px;
-    background-color: #1e1e1ea0; /* Semi-transparent dark background */
+    background-color: rgba(255, 255, 255, 0.7);
     margin: 10px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2{
-    color: #90caf9;
+.main-section h2 {
+    color: #092E59;
+    margin-top: 0;
 }
 
-.main-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
+.main-section p {
+    margin: 0;
+    padding-bottom: 10px;
 }
 
-/* Footer Area */
 footer {
     padding-left: 50px;
     padding-right: 50px;
     display: block;
     justify-content: space-between;
     align-items: center;
-    color: #e0e0e0;
-    background-color: #1e1e1e;
+    color: #000;
     width: 100%;
     box-sizing: border-box;
 }
@@ -299,7 +294,7 @@ footer {
 footer .social-links a {
     margin-right: 10px;
     text-decoration: none;
-    color: #90caf9; /* Accent color */
+    color: #555;
     font-weight: 700;
 }
 
@@ -312,22 +307,22 @@ footer .credits {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #e0e0e0;
+    color: #000000;
 }
 
 footer .scroll-up {
-    border: 2px solid #90caf9;
+    border: 2px solid #555;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 50%;
-    color: #90caf9;
+    color: #555;
     font-weight: 700;
 }
 
-/* Media Queries */
+/* Medya Sorguları */
 @media (max-width: 1000px) {
     body {
-        background-image: url('/IMAGES/mobileDarkMountains.jpg');
+        background-image: url('/IMAGES/mobileMountains.jpg');
         background-size: contain;
     }
 
@@ -344,16 +339,16 @@ footer .scroll-up {
         position: absolute;
         top: 60px;
         right: 20px;
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-        border: 1px solid #90caf9;
+        background-color: #ffffff;
+        color: #000;
+        border: 1px solid #555;
         width: 200px;
         padding: 20px;
     }
 
     nav ul li a {
         text-decoration: none;
-        color: #e0e0e0;
+        color: #000000;
         font-weight: bolder;
         white-space: nowrap;
         font-family: 'Poppins', sans-serif;
@@ -370,7 +365,7 @@ footer .scroll-up {
         bottom: 0;
         width: 0;
         height: 2px;
-        background-color: #90caf9;
+        background-color: #059375;
         transition: width 0.3s ease;
     }
 
@@ -379,7 +374,7 @@ footer .scroll-up {
     }
 
     nav ul li a:hover {
-        color: #90caf9;
+        color: #059375;
     }
 
     nav ul.show {
@@ -406,7 +401,7 @@ footer .scroll-up {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     transition: all 0.3s ease;
 }
 
