@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works | Anıl Bora</title>
+    <meta name="description"
+        content="Anıl Bora's personal website showcasing his work as a Software Developer and Web Designer with a background in Architecture and Design. Explore projects, blog posts, and tutorials.">
+    <meta property="og:title" content="Anıl Bora | Software Developer and Web Designer">
+    <meta property="og:description"
+        content="Explore the portfolio, blog, and tutorials of Anıl Bora, a skilled software developer and web designer with a background in architecture and design.">
+    <meta property="og:image" content="/IMAGES/AnilBoraLogo.png">
+    <meta property="og:url" content="https://www.anilbora.com">
+    <link rel="icon" href="/IMAGES/AnilBoraLogo.png" type="image/png" sizes="32x32">
+
+    <!-- Default to light mode CSS -->
+    <link id="theme-style" rel="stylesheet" href="/CSS/projects/light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/HTML/home.html">
+                <img src="/IMAGES/AnilBoraLogo.png" alt="Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="/HTML/home.html" data-en="HOME" data-tr="ANA SAYFA">HOME</a></li>
+                <li><a href="/HTML/projects.html" data-en="WORKS" data-tr="ÇALIŞMALAR">WORK</a></li>
+                <li><a href="/HTML/blog.html" data-en="BLOG" data-tr="BLOG">BLOG</a></li>
+                <li><a href="/HTML/aboutme.html" data-en="ABOUT" data-tr="HAKKINDA">ABOUT</a></li>
+                <li><a href="/HTML/contactme.html" data-en="CONTACT" data-tr="İLETİŞİM">CONTACT</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="controls">
+            <div class="language-switch">
+                <label class="switch">
+                    <input type="checkbox" id="language-toggle" onclick="toggleLanguage()">
+                    <span class="slider round">
+                        <span class="slider-text tr">TR</span>
+                        <span class="slider-text en">EN</span>
+                    </span>
+                </label>
+            </div>
+            <div class="theme-switch">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round">
+                        <i class="fa-solid fa-sun slider-icon light"></i>
+                        <i class="fa-solid fa-moon slider-icon dark"></i>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section id="main_content">
+            <section class="main-section">
+                <a href="https://github.com/anlbora/Seaborn-Data-Analysis" target="_blank" class="card-link">
+                    <article class="card">
+                        <img src="/IMAGES/DataAnalysisProgram.png"
+                            alt="Screenshot of the Data Analysis Program application">
+                        <h3>Data Analysis Program</h3>
+                        <p>
+                            The Data Analysis Program is a desktop application developed with PyQt5, Pandas, Seaborn,
+                            and Matplotlib to facilitate data exploration, analysis, and visualization. This program
+                            provides a user-friendly interface for loading datasets, exploring their structures,
+                            generating descriptive statistics, conducting correlation analysis, and more.
+                            <span class="more-text">
+                                This program is especially useful for data scientists and analysts looking to streamline
+                                their data workflow. The intuitive interface makes it easy to import and explore data
+                                without needing to write code for common operations.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                </a>
+                <a href="https://github.com/anlbora/bankManagementSystem" target="_blank" class="card-link">
+                    <article class="card">
+                        <img src="/IMAGES/BankManagementSystem.png"
+                            alt="Screenshot of the Bank Management System application">
+                        <h3>Bank Management System</h3>
+                        <p>
+                            The Bank Management System is a comprehensive banking management application designed to
+                            help customers manage their accounts, credit cards, and loans efficiently. It offers a
+                            user-friendly interface for performing various banking operations, from account creation to
+                            money transfers and credit management.
+                            <span class="more-text">
+                                This system also includes advanced security features to ensure the safety of user data
+                                and transactions, making it a reliable solution for both individual and corporate
+                                banking needs.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                </a>
+                <a href="https://github.com/anlbora/Create-House-Project-Revit-API" target="_blank" class="card-link">
+                    <article class="card">
+                        <img src="/IMAGES/SimpleHouseProject.png" alt="Screenshot of the Simple House Project">
+                        <h3>Simple House Project</h3>
+                        <p>
+                            This project is a Revit add-in developed using the Revit API. The add-in allows users to
+                            create a simple house structure, including walls, floors, roofs, windows, and doors,
+                            directly within Autodesk Revit.
+                            <span class="more-text">
+                                The tool simplifies the design process, making it accessible even to those with minimal
+                                Revit experience, while offering robust features for advanced users.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                </a>
+                <a href="https://github.com/anlbora/movieLibrary" target="_blank" class="card-link">
+                    <article class="card">
+                        <img src="/IMAGES/MovieManagement.png" alt="Screenshot of the Movie Management Application">
+                        <h3>Movie Management Program</h3>
+                        <p>
+                            This project is a Revit add-in developed using the Revit API. The add-in allows users to
+                            create a simple house structure, including walls, floors, roofs, windows, and doors,
+                            directly within Autodesk Revit.
+                            <span class="more-text">
+                                It also includes features for managing movie metadata, making it a comprehensive tool
+                                for movie enthusiasts and archivists.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                </a>
+                <a href="https://github.com/anlbora/BrickBrakerGame" target="_blank" class="card-link">
+                    <article class="card">
+                        <img src="/IMAGES/BrickBrakerGame.png" alt="Screenshot of the Brick Braker Game">
+                        <h3>Brick Breaker Game</h3>
+                        <p>
+                            Brick Breaker is a classic arcade game where the player controls a paddle to bounce a ball
+                            and break bricks on the screen. The goal is to break all the bricks without letting the ball
+                            fall below the paddle.
+                            <span class="more-text">
+                                The game features multiple levels of increasing difficulty and various power-ups to
+                                enhance gameplay.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                </a>
+                <a href="https://github.com/anlbora/restaurantManagement" target="_blank" class="card-link">
+                    <article class="card">
+                        <img src="/IMAGES/RestaurantManagementSystem.png"
+                            alt="Screenshot of the Restaurant Management System">
+                        <h3>Restaurant Management Program</h3>
+                        <p>
+                            The Restaurant Management Program is a PyQt5-based desktop application designed to manage
+                            and organize information about orders, foods, and drinks. It provides functionalities for
+                            adding, editing, deleting, and viewing orders, foods, drinks' details. The program utilizes
+                            an SQLite database to store and manage data.
+                            <span class="more-text">
+                                It also supports inventory management and reporting features, making it a comprehensive
+                                tool for restaurant operations.
+                            </span>
+                        </p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                </a>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="social-logos">
+                <a href="mailto:anlbora42@gmail.com" class="logoImage" target="_blank" rel="noopener noreferrer"><img
+                        src="/IMAGES/Mail.png" alt="Mail Logo" class="footerLogo"></a>
+                <a href="https://www.linkedin.com/in/anilbora/" class="logoImage" target="_blank"
+                    rel="noopener noreferrer"><img src="/IMAGES/LinkedinLogo.png" alt="Linkedin Logo"
+                        class="footerLogo"></a>
+                <a href="https://github.com/anlbora" class="logoImage" target="_blank" rel="noopener noreferrer"><img
+                        src="/IMAGES/GithubLogo.png" alt="Github Logo" class="footerLogo"></a>
+                <a href="https://www.kaggle.com/anlbora" class="logoImage" target="_blank"
+                    rel="noopener noreferrer"><img src="/IMAGES/KaggleLogo.png" alt="Kaggle Logo"
+                        class="footerLogo"></a>
+                <a href="https://www.instagram.com/anlbora/" class="logoImage" target="_blank"
+                    rel="noopener noreferrer"><img src="/IMAGES/InstagramLogo.png" alt="Instagram Logo"
+                        class="footerLogo"></a>
+                <a href="http://www.youtube.com/@anlbora1070" class="logoImage" target="_blank"
+                    rel="noopener noreferrer"><img src="/IMAGES/Youtube.png" alt="Youtube Logo" class="footerLogo"></a>
+            </div>
+            <p>&copy; 2024 - Anıl BORA</p>
+            <a href="#home" class="logoImage" id="upLogo" onclick="scrollToTop(event)">
+                <img src="/IMAGES/Up.png" alt="Up Logo" class="footerLogoUp">
+            </a>
+        </div>
+    </footer>
+    <script src="/JS/projects/scripts.js"></script>
+</body>
+
+</html>
