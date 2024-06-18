@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Anıl Bora</title>
+    <meta name="description" content="Anıl Bora's personal website showcasing his work as a Software Developer and Web Designer with a background in Architecture and Design. Explore projects, blog posts, and tutorials.">
+    <meta property="og:title" content="Anıl Bora | Software Developer and Web Designer">
+    <meta property="og:description" content="Explore the portfolio, blog, and tutorials of Anıl Bora, a skilled software developer and web designer with a background in architecture and design.">
+    <meta property="og:image" content="/IMAGES/AnilBoraLogo.png">
+    <meta property="og:url" content="https://www.anilbora.com">
+    <link rel="icon" href="/IMAGES/AnilBoraLogo.png" type="image/png" sizes="32x32">
+
+    <!-- Link to the default light mode CSS -->
+    <link id="theme-style" rel="stylesheet" href="/CSS/blog/light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="/HTML/home.html">
+                <img src="/IMAGES/AnilBoraLogo.png" alt="Anıl Bora Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="/HTML/home.html" data-en="HOME" data-tr="ANA SAYFA">HOME</a></li>
+                <li><a href="/HTML/projects.html" data-en="WORKS" data-tr="ÇALIŞMALAR">WORK</a></li>
+                <li><a href="/HTML/blog.html" data-en="BLOG" data-tr="BLOG">BLOG</a></li>
+                <li><a href="/HTML/aboutme.html" data-en="ABOUT" data-tr="HAKKINDA">ABOUT</a></li>
+                <li><a href="/HTML/contactme.html" data-en="CONTACT" data-tr="İLETİŞİM">CONTACT</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="controls">
+            <div class="language-switch">
+                <label class="switch">
+                    <input type="checkbox" id="language-toggle" onclick="toggleLanguage()">
+                    <span class="slider round">
+                        <span class="slider-text tr">TR</span>
+                        <span class="slider-text en">EN</span>
+                    </span>
+                </label>
+            </div>
+            <div class="theme-switch">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+                    <span class="slider round">
+                        <i class="fa-solid fa-sun slider-icon light"></i>
+                        <i class="fa-solid fa-moon slider-icon dark"></i>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main">
+        <!-- Blog Listing Section -->
+        <section id="main_content">
+            <nav aria-label="Blog Navigation">
+                <ul>
+                    <li><a href="#blog1">Blog 1</a></li>
+                    <li><a href="#blog2">Blog 2</a></li>
+                    <li><a href="#blog3">Blog 3</a></li>
+                    <li><a href="#blog4">Blog 4</a></li>
+                    <li><a href="#blog5">Blog 5</a></li>
+                </ul>
+            </nav>
+
+            <!-- Blog Posts -->
+            <section id="blog1" class="main-section">
+                <article>
+                    <h2>Blog 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                </article>
+            </section>
+            <section id="blog2" class="main-section">
+                <article>
+                    <h2>Blog 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                </article>
+            </section>
+            <section id="blog3" class="main-section">
+                <article>
+                    <h2>Blog 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                </article>
+            </section>
+            <section id="blog4" class="main-section">
+                <article>
+                    <h2>Blog 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                </article>
+            </section>
+            <section id="blog5" class="main-section">
+                <article>
+                    <h2>Blog 5</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis. Debitis nobis dolorum similique porro quasi perferendis exercitationem nulla incidunt, unde adipisci laudantium quis atque ex minus vero eaque magni quia impedit non modi dolores assumenda. Error, voluptatibus! Eaque, alias.</p>
+                    <p>Molestias molestiae architecto repellat ducimus facere praesentium, ipsam aliquid quis perferendis possimus blanditiis, deserunt aut saepe modi provident neque, velit libero ipsa quibusdam culpa? Ratione atque fugiat ea doloremque consequatur! Autem reiciendis minima rem debitis aliquam doloremque, porro odio ipsa consectetur quod magnam vel a laudantium delectus. Voluptate natus eum officia voluptatibus nemo! Eligendi itaque reprehenderit dolorum blanditiis minus id.</p>
+                    <p>Voluptatibus perspiciatis mollitia necessitatibus architecto deserunt dolore provident consequatur nulla dolorem eum repudiandae distinctio eveniet accusamus esse eius debitis nihil ipsum, iure qui, doloremque impedit quos aliquam? Reiciendis, deleniti fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ducimus, ratione placeat autem temporibus unde distinctio voluptatem similique omnis minima, repudiandae ipsa vero ut consequatur expedita culpa non velit reiciendis.</p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-logos">
+                <a href="mailto:anlbora42@gmail.com" class="logoImage" target="_blank" rel="noopener noreferrer"><img
+                        src="/IMAGES/Mail.png" alt="Mail Logo" class="footerLogo"></a>
+                <a href="https://www.linkedin.com/in/anilbora/" class="logoImage" target="_blank"
+                    rel="noopener noreferrer"><img src="/IMAGES/LinkedinLogo.png" alt="Linkedin Logo"
+                        class="footerLogo"></a>
+                <a href="https://github.com/anlbora" class="logoImage" target="_blank" rel="noopener noreferrer"><img
+                        src="/IMAGES/GithubLogo.png" alt="Github Logo" class="footerLogo"></a>
+                <a href="https://www.kaggle.com/anlbora" class="logoImage" target="_blank"
+                    rel="noopener noreferrer"><img src="/IMAGES/KaggleLogo.png" alt="Kaggle Logo"
+                        class="footerLogo"></a>
+                <a href="https://www.instagram.com/anlbora/" class="logoImage" target="_blank"
+                    rel="noopener noreferrer"><img src="/IMAGES/InstagramLogo.png" alt="Instagram Logo"
+                        class="footerLogo"></a>
+                <a href="http://www.youtube.com/@anlbora1070" class="logoImage" target="_blank"
+                    rel="noopener noreferrer"><img src="/IMAGES/Youtube.png" alt="Youtube Logo" class="footerLogo"></a>
+            </div>
+            <p>&copy; 2024 - Anıl BORA</p>
+            <a href="#home" class="logoImage" id="upLogo">
+                <img src="/IMAGES/Up.png" alt="Up Logo" class="footerLogoUp">
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="/JS/blog/scripts.js"></script>
+</body>
+
+</html>
