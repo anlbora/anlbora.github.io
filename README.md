@@ -47,3 +47,28 @@ Welcome to the repository for my personal website. This website showcases my wor
 |-- README.md                 # This README file
 
 ```
+## HOME PAGE
+Home page contains a welcome text, works and blogs divs. Works and Blogs titles are responsive to cursor. Works and blogs entries are also responsive to cursor. They have hover animation. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
