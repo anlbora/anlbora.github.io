@@ -56,6 +56,8 @@ The Home page provides an introduction to who I am and highlights key sections o
   - **Works and Blogs**: These sections showcase a preview of my projects and latest blog posts. Each entry is interactive and responsive to the cursor, featuring hover animations that enhance user experience.
 
   - **Header and Footer**: Both contain navigation elements with hover animations for a more engaging interface. The header includes links to other pages of the website, and the footer provides quick links to my social media profiles and an "up" button for easy navigation back to the top of the page.
+
+    
     ![2](https://github.com/anlbora/anlbora.github.io/assets/100442507/76fbc4bb-f64d-490d-a588-fc4454b50964)
     
     ![9](https://github.com/anlbora/anlbora.github.io/assets/100442507/0b39b293-3ea7-4dbb-a6bf-838d97e1c45b)
